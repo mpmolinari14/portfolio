@@ -1,8 +1,8 @@
 #header-logo {
   /*outline: dashed orange 2px;*/
-  width: 10em;
-  height: 6em;
-  margin: .4em 0 0 40px;
+  width: 160px;
+  height: 80px;
+  margin: 10px 0 0 20px;
 }
 
 .main-nav {
@@ -13,7 +13,60 @@
   float: right;
   font-size: 4em;
   padding: 18px 40px 0 0;
-  color: rgb(248,147,30)
+  color: rgb(248,147,30);
+}
+
+#resume-button {
+  position: absolute;
+  top: 20px;
+  left: calc(50% - 140px);
+  width: 280px;
+  height: 40px;
+  border-radius: 20%;
+  background-color: rgba(248,147,30,0.8);
+  font-family: 'Russo One', sans-serif;
+  font-size: 1.4em;
+  color: rgb(81,81,83);
+}
+
+#portfolio-button {
+  position: absolute;
+  top: 80px;
+  left: calc(50% - 140px);
+  width: 280px;
+  height: 40px;
+  border-radius: 20%;
+  background-color: rgba(248,147,30,0.8);
+  font-family: 'Russo One', sans-serif;
+  font-size: 1.4em;
+  color: rgb(81,81,83);
+}
+.name-cont {
+  /*outline: dashed yellow 2px;*/
+  position: absolute;
+  bottom: 180px;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  z-index: -1;
+}
+
+.first-name {
+  position: absolute;
+  bottom: 40px;
+  left: calc(50% - 140px);
+  font-family: 'Dr Sugiyama', cursive;
+  font-size: 60px;
+  color: rgb(250,250,250);
+}
+
+.last-name {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 143px);
+  font-family: 'Bungee', cursive;
+  font-size: 50px;
+  color: rgb(248,147,30);
 }
 
 .social {
@@ -23,7 +76,7 @@
 }
 
 .social a {
-  padding: .4em;
+  padding: 10px 10px;
   font-size: 2em;
 }
 
@@ -35,6 +88,7 @@
   }
 
   .main-nav {
+    margin-top: 35px;
     margin-right: 20px;
     float: right;
     display: flex;
@@ -42,10 +96,11 @@
   }
 
   .main-nav li {
+    outline: dashed green 2px;
     display: inline-block;
     font-family: 'Russo One', sans-serif;
     font-size: 30px;
-    padding: 42px 10px 10px 10px;
+    padding: 0 14px;
   }
 
   .main-nav a {
@@ -60,7 +115,7 @@
 @media screen and (min-width: 1060px) {
 
   .main-nav {
-    /*outline: dashed 2px green;*/
+    outline: dashed 2px green;
     float: right;
     display: inline-block;
   }

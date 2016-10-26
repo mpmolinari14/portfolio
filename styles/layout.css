@@ -2,22 +2,26 @@ body {
   background: url(../img/mmHero.jpg) no-repeat center fixed;
   background-size: cover;
   background-position: right;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
 }
 
 header {
+  /*outline: dashed white 2px;*/
   width: 100%;
   height: 100px;
-  /*background-color: rgba(250,250,250,0.4);*/
+}
+
+main {
+  /*outline: dashed purple 4px;*/
+  position: relative;
+  width: 100%;
+  height: 100vh;
 }
 
 footer {
+  /*outline: dashed white 2px;*/
   position:fixed;
   left:0px;
   bottom:0px;
   width:100%;
   height:60px;
-  /*background-color: rgba(250,250,250,0.4);*/
 }
