@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    <header>
+    <header class="main-header">
       <img src="img/mmLogo.png" id="header-logo">
 
       <a id="header-menu" class="icon-menu"></a>
@@ -30,10 +30,31 @@
 
     <main>
 
+      <button type="button" name="resume" id="resume-button">View My Resume</button>
+      <button type="button" name="portfolio" id="portfolio-button">View My Portfolio</button>
+
+      <!-- NAME -->
       <div class="name-cont">
-        <!-- <div class="first-name">Mike</div>
-        <div class="last-name">MOLINARI</div> -->
+        <div class="first-name">Mike</div>
+        <div class="last-name">MOLINARI</div>
       </div>
+
+      <!-- PORTFOLIO -->
+      <section id=projects>
+        <article class="template">
+          <header class="project-header">
+            <h1>Project Name</h1>
+            <div class="byline">
+              Developed By <address><a href="">Developer Names</a></address>
+              Deployed On <time pubdate datetime="2000-01-01">Deployment Date</time>
+            </div>
+          </header>
+          <img src="http://www.placehold.it/300x200" class"sh-image">
+          <button type="button" id="repo-button">GitHub Repo</button>
+          <button type="button" id="url-button">Project URL</button><br>
+          <section class="description"> Description of Project Goes Here</section>
+        </article>
+      </section>
 
     </main>
 
@@ -47,6 +68,11 @@
       </div>
     </footer>
 
+    <!-- VENDOR SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
+    <!-- MY SCRIPTS -->
+    <script type="text/javascript" src="scripts/projectData.js"></script>
+    <script type="text/javascript" src="scripts/projectView.js"></script>
   </body>
 
 </html>
