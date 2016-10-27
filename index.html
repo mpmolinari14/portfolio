@@ -11,37 +11,46 @@
     <link rel="stylesheet" href="vendor/styles/reset.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/module.css">
+    <link rel="stylesheet" href="styles/module-home.css">
+    <link rel="stylesheet" href="styles/module-portfolio.css">
   </head>
 
   <body>
-    <header class="main-header">
+    <header class="main-header">  <!-- START OF HEADER -->
       <img src="img/mmLogo2.png" id="header-logo">
 
       <a id="header-menu" class="icon-menu"></a>
 
-      <ul class="main-nav">
+      <ul  id="main-nav" class="the-nav">
         <li class="tab"><a href="#">HOME</a></li>
         <li class="tab"><a href="#">ABOUT</a></li>
         <li class="tab"><a href="#">BLOG</a></li>
         <li class="tab"><a href="#">CONTACT</a></li>
       </ul>
-    </header>
+    </header>  <!-- END OF HEADER -->
 
-    <main>
-      <div class="button-cont">
-        <button type="button" id="resume-button">View My Resume</button>
-        <button type="button" id="portfolio-button">View My Portfolio</button>
-      </div>
+    <main>  <!-- START OF MAIN -->
+      <!--====================
+              HOME PAGE
+        ====================-->
+      <section id="home">
+        <!-- BUTTONS -->
+        <div class="button-cont">
+          <button type="button" id="resume-button">View My Resume</button>
+          <button type="button" id="portfolio-button">View My Portfolio</button>
+        </div>
 
-      <!-- NAME -->
-      <div class="name-cont">
-        <div class="first-name">Mike</div>
-        <div class="last-name">MOLINARI</div>
-      </div>
+        <!-- NAME -->
+        <div class="name-cont">
+          <div class="first-name">Mike</div>
+          <div class="last-name">MOLINARI</div>
+        </div>
+      </section>
 
-      <!-- PORTFOLIO -->
-      <section id=projects>
+      <!--====================
+            PORTFOLIO PAGE
+        ====================-->
+      <section id=portfolio>
         <article class="template">
           <header class="project-header">
             <h1>Project Name</h1>
@@ -56,10 +65,9 @@
           <section class="description"> Description of Project Goes Here</section>
         </article>
       </section>
+    </main>  <!-- END OF MAIN -->
 
-    </main>
-
-    <footer>
+    <footer>  <!-- START OF FOOTER -->
       <div class="social">
         <a href="https://www.linkedin.com/in/michael-molinari-00b08790" class="icon-linkedin2"></a>
         <a href="https://github.com/mpmolinari14" class="icon-github"></a>
@@ -67,11 +75,12 @@
         <a href="https://www.twitter.com/mpmolinari48" class="icon-twitter"></a>
         <a href="https://www.facebook.com/mpmolinari14" class="icon-facebook2"></a>
       </div>
-    </footer>
+    </footer>  <!-- END OF FOOTER -->
 
     <!-- VENDOR SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
     <!-- MY SCRIPTS -->
+    <script type="text/javascript" src="scripts/app.js"></script>
     <script type="text/javascript" src="scripts/projectData.js"></script>
     <script type="text/javascript" src="scripts/projectView.js"></script>
   </body>
