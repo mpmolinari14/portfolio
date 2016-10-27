@@ -1,5 +1,8 @@
+/* ------------------------------------
+    LOGO AND NAVIGATION
+------------------------------------ */
 #header-logo {
-  /*outline: dashed orange 2px;*/
+  /*outline: dashed yellow 2px;*/
   width: 160px;
   height: 80px;
   margin: 10px 0 0 20px;
@@ -7,40 +10,48 @@
 
 .main-nav {
   display: none;
+  /*background-color: rgb(209,148,34);*/
+  /*z-index: 9;*/
+}
+
+.main-nav li {
+  font-family: 'Russo One', sans-serif;
+  font-size: 20px;
+  padding: 6px;
 }
 
 #header-menu {
   float: right;
   font-size: 4em;
   padding: 18px 40px 0 0;
-  color: rgb(248,147,30);
+  color: rgb(209,148,34);
 }
 
-#resume-button {
+/* ------------------------------------
+    RESUME AND PORTFOLIO BUTTONS
+------------------------------------ */
+.button-cont {
+  /*outline: dashed yellow 2px;*/
   position: absolute;
-  top: 20px;
-  left: calc(50% - 140px);
-  width: 280px;
+  top: 0;
+  left: 20px;
+  width: 200px;
+}
+
+#resume-button, #portfolio-button {
+  width: 200px;
   height: 40px;
+  margin-top: 10px;
   border-radius: 20%;
-  background-color: rgba(248,147,30,0.8);
+  background-color: rgba(209,148,34,0.8);
   font-family: 'Russo One', sans-serif;
-  font-size: 1.4em;
+  font-size: 1em;
   color: rgb(81,81,83);
 }
 
-#portfolio-button {
-  position: absolute;
-  top: 80px;
-  left: calc(50% - 140px);
-  width: 280px;
-  height: 40px;
-  border-radius: 20%;
-  background-color: rgba(248,147,30,0.8);
-  font-family: 'Russo One', sans-serif;
-  font-size: 1.4em;
-  color: rgb(81,81,83);
-}
+/* ------------------------------------
+    NAME CONTAINER
+------------------------------------ */
 .name-cont {
   /*outline: dashed yellow 2px;*/
   position: absolute;
@@ -66,9 +77,12 @@
   left: calc(50% - 143px);
   font-family: 'Bungee', cursive;
   font-size: 50px;
-  color: rgb(248,147,30);
+  color: rgb(209,148,34);
 }
 
+/* ------------------------------------
+    SOCIAL MEDIA
+------------------------------------ */
 .social {
   display: flex;
   justify-content: center;
@@ -83,6 +97,9 @@
 
 @media screen and (min-width: 760px) {
 
+  /* ------------------------------------
+      LOGO AND NAVIGATION
+  ------------------------------------ */
   #header-menu {
     display: none;
   }
@@ -96,7 +113,7 @@
   }
 
   .main-nav li {
-    outline: dashed green 2px;
+    /*outline: dashed yellow 2px;*/
     display: inline-block;
     font-family: 'Russo One', sans-serif;
     font-size: 30px;
@@ -107,7 +124,29 @@
     color: rgb(81,81,83);
   }
   .main-nav a:hover {
-    color: rgb(248,147,30)
+    color: rgb(209,148,34)
+  }
+
+  /* ------------------------------------
+      RESUME AND PORTFOLIO BUTTONS
+  ------------------------------------ */
+  .button-cont {
+    /*outline: dashed yellow 2px;*/
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 300px;
+  }
+
+  #resume-button, #portfolio-button {
+    width: 300px;
+    height: 60px;
+    margin-top: 15px;
+    border-radius: 20%;
+    background-color: rgba(209,148,34,0.8);
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.6em;
+    color: rgb(81,81,83);
   }
 
 }
@@ -115,7 +154,7 @@
 @media screen and (min-width: 1060px) {
 
   .main-nav {
-    outline: dashed 2px green;
+    /*outline: dashed yellow 2px;*/
     float: right;
     display: inline-block;
   }
