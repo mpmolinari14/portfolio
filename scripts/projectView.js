@@ -13,29 +13,26 @@ function Project (opts) {
 };
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone().removeClass();
+  var $newProject = $('article.template').clone().removeClass('template');
   $newProject.find('h1').html(this.projName);
-  $newProject.find('address a').html(this.developers);
+  $newProject.find('.byline span').html(this.developers);
   $newProject.find('time').html(this.deployedOn);
   $newProject.find('img').attr('src', this.projImage);
-  $newProject.find('#repo-button').attr('href', this.projRepo);
-  $newProject.find('#url-button').attr('href', this.projURL);
+  $newProject.find('#repo-button a').attr('href', this.projRepo);
+  $newProject.find('#url-button a').attr('href', this.projURL);
   $newProject.find('.description').html(this.description);
-
-  $newProject.find('time[pubdate]').attr('title', this.deployedOn);
-  $newProject.find('time').text('about ' + parseInt((new Date() - new Date(this.deployedOn))/60/60/24/1000) + ' days ago');
 
   return $newProject;
 };
 
-projectData.sort(function(currentObject, nextObject) {
-  return (new Date(nextObject.publishedOn)) - (new Date(currentObject.publishedOn));
+projectData.sort(function(a, b) {
+  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
 
 projectData.forEach(function(ele) {
   projects.push(new Project(ele));
 });
 
-projects.forEach(function(project) {
-  $('#portfolio').append(project.toHtml());
+projects.forEach(function(y) {
+  $('#portfolio').append(y.toHtml());
 });

@@ -2,7 +2,7 @@
     HEADER
 ------------------------------------ */
 #header-logo {
-  outline: dashed yellow 2px;
+  /*outline: dashed yellow 2px;*/
   width: 160px;
   height: 80px;
   margin: 10px 0 0 20px;
@@ -10,7 +10,7 @@
 
 
 #header-menu {
-  outline: dashed yellow 2px;
+  /*outline: dashed yellow 2px;*/
   float: right;
   width: 80px;
   height: 80px;
@@ -106,6 +106,11 @@
 .social a {
   padding: 10px 10px;
   font-size: 2em;
+  color: white;
+}
+
+.social a:hover {
+  color: rgb(209,148,34);
 }
 
 
@@ -115,7 +120,7 @@
       HEADER
   ------------------------------------ */
   #header-logo {
-    outline: dashed yellow 2px;
+    /*outline: dashed yellow 2px;*/
     width: 200px;
     height: 100px;
     margin: 10px 0 0 20px;
@@ -126,21 +131,18 @@
   }
 
   .the-nav {
-    display: none;
+    /*outline: dashed yellow 2px;*/
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 22px);
   }
-
-  .open-nav {
-    display: block;
-    background: rgb(209,148,34);
-  }
-
 
   #main-nav li {
-    font-family: 'Russo One', sans-serif;
-    font-size: 20px;
+    display: inline-block;
+    font-size: 30px;
     text-align: center;
     padding: 6px;
-    border-bottom: solid 2px rgb(81,81,83);
   }
 
   #main-nav li a {
@@ -206,12 +208,26 @@
 }
 
 @media screen and (min-width: 1060px) {
-
-  .main-nav {
+  /* ------------------------------------
+      HEADER
+  ------------------------------------ */
+  .the-nav {
     /*outline: dashed yellow 2px;*/
-    float: right;
     display: inline-block;
+    position: absolute;
+    right: calc(50% - 238.15px);
+    top: calc(50% - 22px);
   }
 
+}
+
+@media screen and (min-width: 1220px) {
+  /* ------------------------------------
+      RESUME AND PORTFOLIO BUTTONS
+  ------------------------------------ */
+  .button-cont {
+    bottom: 110px;
+    left: 20px;
+  }
 
 }
