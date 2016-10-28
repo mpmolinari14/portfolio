@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Mike Molinari</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Russo+One|Dr+Sugiyama|Bungee" rel="stylesheet">
     <link rel="stylesheet" href="vendor/icomoon/style.css">
@@ -13,6 +14,23 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/module-home.css">
     <link rel="stylesheet" href="styles/module-portfolio.css">
+
+    <!-- HANDLEBARS TEMPLATES -->
+    <script id="project-template" type="text/x-handlebars-template">
+      <article class="project-template">
+        <h2>{{projName}}</h2>
+        <div class="byline">
+          developed by <span>{{developers}}</span><br>
+          Deployed On <time>{{deployedOn}}</time>
+        </div>
+        <img src="{{projImage}}">
+        <button type="button" id="repo-button"><a href="{{projRepo}}">GitHub Repo</a></button>
+        <button type="button" id="url-button"><a href="{{projURL}}">Project URL</a></button><br>
+        <section class="project-description">{{{description}}}</section>
+        <hr>
+      </article>
+    </script>
+
   </head>
 
   <body>
@@ -56,20 +74,7 @@
         <!--====================
               PORTFOLIO PAGE
           ====================-->
-        <section id="portfolio">
-          <article class="project-template">
-            <h2>{{projName}}</h2>
-            <div class="byline">
-              developed by <span>{{devName}}</span><br>
-              Deployed On <time>{{deployedOn}}</time>
-            </div>
-            <img src="{{projImg}}">
-            <button type="button" id="repo-button"><a href="{{projRepo}}">GitHub Repo</a></button>
-            <button type="button" id="url-button"><a href="{{projURL}}">Project URL</a></button><br>
-            <section class="project-description">{{{description}}}</section>
-            <hr>
-          </article>
-        </section>
+          <section id="portfolio"></section>
 
       </div>
     </main>  <!-- END OF MAIN -->
@@ -84,17 +89,17 @@
           <a href="https://www.twitter.com/mpmolinari48" class="icon-twitter"></a>
           <a href="https://www.facebook.com/mpmolinari14" class="icon-facebook2"></a>
         </div>
-        
+
       </div>
     </footer>  <!-- END OF FOOTER -->
 
     <!-- VENDOR SCRIPTS -->
-    <script type="text/javascript" src="vendor/scripts/jquery.js"</script>
-    <script type="text/javascript" src="vendor/scripts/handlebars.js"</script>
+    <script type="text/javascript" src="vendor/scripts/jquery.js"></script>
+    <script type="text/javascript" src="vendor/scripts/handlebars.js"></script>
     <!-- MY SCRIPTS -->
-    <script type="text/javascript" src="scripts/app.js"></script>
     <script type="text/javascript" src="scripts/projectData.js"></script>
     <script type="text/javascript" src="scripts/projects.js"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
   </body>
 
 </html>
