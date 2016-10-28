@@ -16,73 +16,85 @@
   </head>
 
   <body>
-    <header class="main-header">  <!-- START OF HEADER -->
-      <img src="img/mmLogo2.png" id="header-logo">
+    <header>  <!-- START OF HEADER -->
+      <div class="header-cont">
 
-      <a id="header-menu" class="icon-menu"></a>
+        <img src="img/mmLogo2.png" id="header-logo">
 
-      <ul  id="main-nav" class="the-nav">
-        <li class="tab"><a href="#">HOME</a></li>
-        <li class="tab"><a href="#">ABOUT</a></li>
-        <li class="tab"><a href="#">BLOG</a></li>
-        <li class="tab"><a href="#">CONTACT</a></li>
-      </ul>
+        <a id="header-menu" class="icon-menu"></a>
+
+        <ul  id="main-nav" class="the-nav">
+          <li class="tab"><a href="#">HOME</a></li>
+          <li class="tab"><a href="#">ABOUT</a></li>
+          <li class="tab"><a href="#">BLOG</a></li>
+          <li class="tab"><a href="#">CONTACT</a></li>
+        </ul>
+
+      </div>
     </header>  <!-- END OF HEADER -->
 
     <main>  <!-- START OF MAIN -->
-      <!--====================
-              HOME PAGE
-        ====================-->
-      <section id="home">
-        <!-- BUTTONS -->
-        <div class="button-cont">
-          <button type="button" id="resume-button">View My Resume</button>
-          <button type="button" id="portfolio-button">View My Portfolio</button>
-        </div>
+      <div class="main-cont">
 
-        <!-- NAME -->
-        <div class="name-cont">
-          <div class="first-name">Mike</div>
-          <div class="last-name">MOLINARI</div>
-        </div>
-      </section>
-
-      <!--====================
-            PORTFOLIO PAGE
-        ====================-->
-      <section id=portfolio>
-        <article class="template">
-          <h1>Project Name</h1>
-          <div class="byline">
-            Developed By <span>Developer Names</span><br>
-            Deployed On <time>Deployment Date</time>
+        <!--====================
+                HOME PAGE
+          ====================-->
+        <section id="home">
+          <!-- BUTTONS -->
+          <div class="button-cont">
+            <button type="button" id="resume-button">View My Resume</button>
+            <button type="button" id="portfolio-button">View My Portfolio</button>
           </div>
-          <img src="http://www.placehold.it/300x200" class"sh-image">
-          <button type="button" id="repo-button"><a href="">GitHub Repo</a></button>
-          <button type="button" id="url-button"><a href="">Project URL</a></button><br>
-          <section class="description"> Description of Project Goes Here</section>
-          <hr>
-        </article>
-      </section>
+
+          <!-- NAME -->
+          <div class="name-cont">
+            <div class="first-name">Mike</div>
+            <div class="last-name">MOLINARI</div>
+          </div>
+        </section>
+
+        <!--====================
+              PORTFOLIO PAGE
+          ====================-->
+        <section id="portfolio">
+          <article class="project-template">
+            <h2>{{projName}}</h2>
+            <div class="byline">
+              developed by <span>{{devName}}</span><br>
+              Deployed On <time>{{deployedOn}}</time>
+            </div>
+            <img src="{{projImg}}">
+            <button type="button" id="repo-button"><a href="{{projRepo}}">GitHub Repo</a></button>
+            <button type="button" id="url-button"><a href="{{projURL}}">Project URL</a></button><br>
+            <section class="project-description">{{{description}}}</section>
+            <hr>
+          </article>
+        </section>
+
+      </div>
     </main>  <!-- END OF MAIN -->
 
-    <footer class="main-footer">  <!-- START OF FOOTER -->
-      <div class="social">
-        <a href="https://www.linkedin.com/in/michael-molinari-00b08790" class="icon-linkedin2"></a>
-        <a href="https://github.com/mpmolinari14" class="icon-github"></a>
-        <a href="https://www.instagram.com/mpmolinari48" class="icon-instagram"></a>
-        <a href="https://www.twitter.com/mpmolinari48" class="icon-twitter"></a>
-        <a href="https://www.facebook.com/mpmolinari14" class="icon-facebook2"></a>
+    <footer>  <!-- START OF FOOTER -->
+      <div class="footer-cont">
+
+        <div class="social">
+          <a href="https://www.linkedin.com/in/michael-molinari-00b08790" class="icon-linkedin2"></a>
+          <a href="https://github.com/mpmolinari14" class="icon-github"></a>
+          <a href="https://www.instagram.com/mpmolinari48" class="icon-instagram"></a>
+          <a href="https://www.twitter.com/mpmolinari48" class="icon-twitter"></a>
+          <a href="https://www.facebook.com/mpmolinari14" class="icon-facebook2"></a>
+        </div>
+        
       </div>
     </footer>  <!-- END OF FOOTER -->
 
     <!-- VENDOR SCRIPTS -->
-    <script type="text/x-jquery" src="vendor/scripts/jquery.js"</script>
-    <script type="text/x-handlebars" src="vendor/scripts/handlebars.js"</script>
+    <script type="text/javascript" src="vendor/scripts/jquery.js"</script>
+    <script type="text/javascript" src="vendor/scripts/handlebars.js"</script>
     <!-- MY SCRIPTS -->
     <script type="text/javascript" src="scripts/app.js"></script>
     <script type="text/javascript" src="scripts/projectData.js"></script>
-    <script type="text/javascript" src="scripts/projectView.js"></script>
+    <script type="text/javascript" src="scripts/projects.js"></script>
   </body>
 
 </html>

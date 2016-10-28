@@ -13,16 +13,10 @@ function Project (opts) {
 };
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone().removeClass('template');
-  $newProject.find('h1').html(this.projName);
-  $newProject.find('.byline span').html(this.developers);
-  $newProject.find('time').html(this.deployedOn);
-  $newProject.find('img').attr('src', this.projImage);
-  $newProject.find('#repo-button a').attr('href', this.projRepo);
-  $newProject.find('#url-button a').attr('href', this.projURL);
-  $newProject.find('.description').html(this.description);
+  var source = $('#project-template').html();
+  var templateRender = Handlebars.compile(source);
 
-  return $newProject;
+  return templateRender(this);
 };
 
 projectData.sort(function(a, b) {
