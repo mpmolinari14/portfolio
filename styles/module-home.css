@@ -1,39 +1,50 @@
 /* ------------------------------------
-    LOGO AND NAVIGATION
+    HEADER
 ------------------------------------ */
 #header-logo {
-  /*outline: dashed yellow 2px;*/
   width: 160px;
   height: 80px;
   margin: 10px 0 0 20px;
 }
 
-.main-nav {
-  display: none;
-  /*background-color: rgb(209,148,34);*/
-  /*z-index: 9;*/
-}
-
-.main-nav li {
-  font-family: 'Russo One', sans-serif;
-  font-size: 20px;
-  padding: 6px;
-}
 
 #header-menu {
   float: right;
-  font-size: 4em;
-  padding: 18px 40px 0 0;
+  width: 80px;
+  height: 80px;
+  padding: 10px 20px 0 0;
+  font-size: 80px;
   color: rgb(209,148,34);
+}
+
+.the-nav {
+  display: none;
+}
+
+.open-nav {
+  display: block;
+  background: rgb(209,148,34);
+}
+
+
+#main-nav li {
+  font-family: 'Russo One', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  padding: 6px;
+  border-bottom: solid 2px rgb(81,81,83);
+}
+
+#main-nav li a {
+  color: rgb(81,81,83);
 }
 
 /* ------------------------------------
     RESUME AND PORTFOLIO BUTTONS
 ------------------------------------ */
 .button-cont {
-  /*outline: dashed yellow 2px;*/
   position: absolute;
-  top: 0;
+  top: 100px;
   left: 20px;
   width: 200px;
 }
@@ -53,9 +64,8 @@
     NAME CONTAINER
 ------------------------------------ */
 .name-cont {
-  /*outline: dashed yellow 2px;*/
   position: absolute;
-  bottom: 180px;
+  bottom: 0px;
   width: 100vw;
   height: 100vh;
   margin: auto;
@@ -92,32 +102,44 @@
 .social a {
   padding: 10px 10px;
   font-size: 2em;
+  color: white;
+}
+
+.social a:hover {
+  color: rgb(209,148,34);
 }
 
 
 @media screen and (min-width: 760px) {
-
   /* ------------------------------------
-      LOGO AND NAVIGATION
+      HEADER
   ------------------------------------ */
+  #header-logo {
+    width: 200px;
+    height: 100px;
+    margin: 10px 0 0 20px;
+  }
+
   #header-menu {
     display: none;
   }
 
-  .main-nav {
-    margin-top: 35px;
-    margin-right: 20px;
-    float: right;
-    display: flex;
-    justify-content: flex-end;
+  .the-nav {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 22px);
   }
 
-  .main-nav li {
-    /*outline: dashed yellow 2px;*/
+  #main-nav li {
     display: inline-block;
-    font-family: 'Russo One', sans-serif;
     font-size: 30px;
-    padding: 0 14px;
+    text-align: center;
+    padding: 6px;
+  }
+
+  #main-nav li a {
+    color: rgb(81,81,83);
   }
 
   .main-nav a {
@@ -131,9 +153,8 @@
       RESUME AND PORTFOLIO BUTTONS
   ------------------------------------ */
   .button-cont {
-    /*outline: dashed yellow 2px;*/
     position: absolute;
-    top: 0;
+    top: 110px;
     left: 20px;
     width: 300px;
   }
@@ -143,21 +164,58 @@
     height: 60px;
     margin-top: 15px;
     border-radius: 20%;
-    background-color: rgba(209,148,34,0.8);
-    font-family: 'Russo One', sans-serif;
     font-size: 1.6em;
-    color: rgb(81,81,83);
   }
 
+  /* ------------------------------------
+      NAME CONTAINER
+  ------------------------------------ */
+  .first-name {
+    bottom: 70px;
+    left: calc(50% -  280px);
+    font-size: 120px;
+  }
+
+  .last-name {
+    bottom: 0;
+    left: calc(50% - 285.85px);
+    font-size: 100px;
+  }
+
+  /* ------------------------------------
+      SOCIAL MEDIA
+  ------------------------------------ */
+  .social {
+    display: flex;
+    justify-content: center;
+    margin-left: -4px;
+  }
+
+  .social a {
+    padding: 10px 10px;
+    font-size: 4em;
+  }
 }
 
 @media screen and (min-width: 1060px) {
-
-  .main-nav {
-    /*outline: dashed yellow 2px;*/
-    float: right;
+  /* ------------------------------------
+      HEADER
+  ------------------------------------ */
+  .the-nav {
     display: inline-block;
+    position: absolute;
+    right: calc(50% - 238.15px);
+    top: calc(50% - 22px);
   }
+}
 
-
+@media screen and (min-width: 1220px) {
+  /* ------------------------------------
+      RESUME AND PORTFOLIO BUTTONS
+  ------------------------------------ */
+  .button-cont {
+    position: absolute;
+    bottom: 110px;
+    left: 20px;
+  }
 }

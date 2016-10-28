@@ -1,58 +1,38 @@
 'use strict';
 
+var projects = [];
 
-$(document).ready(function() {
-  var projects = [];
+function Project (opts) {
+  this.projName = opts.projName;
+  this.developers = opts.developers;
+  this.deployedOn = opts.deployedOn;
+  this.projImage = opts.projImage;
+  this.projRepo = opts.projRepo;
+  this.projURL = opts.projURL;
+  this.description = opts.description;
+};
 
-  function Project (opts) {
-    this.projName = opts.projName;
-    this.developers = opts.developers;
-    this.deployedOn = opts.deployedOn;
-    this.projImage = opts.projImage;
-    this.projRepo = opts.projRepo;
-    this.projURL = opts.projURL;
-    this.description = opts.description;
-  };
+Project.prototype.toHtml = function() {
+  var $newProject = $('article.template').clone().removeClass('template');
+  $newProject.find('h1').html(this.projName);
+  $newProject.find('.byline span').html(this.developers);
+  $newProject.find('time').html(this.deployedOn);
+  $newProject.find('img').attr('src', this.projImage);
+  $newProject.find('#repo-button a').attr('href', this.projRepo);
+  $newProject.find('#url-button a').attr('href', this.projURL);
+  $newProject.find('.description').html(this.description);
 
-  Project.prototype.toHtml = function() {
-    var $newProject = $('article.template').clone().removeClass();
-    $newProject.find('h1').html(this.projName);
-    $newProject.find('address a').html(this.developers);
-    $newProject.find('time').html(this.deployedOn);
-    $newProject.find('img').attr('src', this.projImage);
-    $newProject.find('#repo-button').attr('href', this.projRepo);
-    $newProject.find('#url-button').attr('href', this.projURL);
-    $newProject.find('.description').html(this.description);
+  return $newProject;
+};
 
-    $newProject.find('time[pubdate]').attr('title', this.deployedOn);
-    $newProject.find('time').text('about ' + parseInt((new Date() - new Date(this.deployedOn))/60/60/24/1000) + ' days ago');
+projectData.sort(function(a, b) {
+  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+});
 
-    return $newProject;
-  };
+projectData.forEach(function(ele) {
+  projects.push(new Project(ele));
+});
 
-  projectData.sort(function(currentObject, nextObject) {
-    return (new Date(nextObject.publishedOn)) - (new Date(currentObject.publishedOn));
-  });
-
-  projectData.forEach(function(ele) {
-    projects.push(new Project(ele));
-  });
-
-  projects.forEach(function(project) {
-    $('#projects').append(project.toHtml());
-  });
-
-  // HIDE OTHER PAGES ON LOAD //
-  $('#projects').hide();
-
-  // SHOW PORTFOLIO PAGE //
-  $('#portfolio-button').on('click', function() {
-    $('#resume-button, #portfolio-button, .name-cont').hide();
-    $('body').css('background', 'none');
-    $('.main-header, footer').css('background-color', 'rgba(0,0,0,0.8)');
-    $('#projects').show();
-  });
-
-
-
+projects.forEach(function(y) {
+  $('#portfolio').append(y.toHtml());
 });
