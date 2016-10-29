@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- STYLES -->
-    <link href="https://fonts.googleapis.com/css?family=Russo+One|Dr+Sugiyama|Bungee" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dr+Sugiyama|Bungee|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="vendor/icomoon/style.css">
     <link rel="stylesheet" href="vendor/styles/reset.css">
     <link rel="stylesheet" href="styles/base.css">
@@ -24,10 +24,11 @@
           Deployed On <time>{{deployedOn}}</time>
         </div>
         <img src="{{projImage}}">
-        <button type="button" id="repo-button"><a href="{{projRepo}}">GitHub Repo</a></button>
-        <button type="button" id="url-button"><a href="{{projURL}}">Project URL</a></button><br>
+        <div class="link-cont">
+          <button type="button" id="repo-button"><a href="{{projRepo}}">GitHub Repo</a></button>
+          <button type="button" id="url-button"><a href="{{projURL}}">Project URL</a></button><br>
+        </div>
         <section class="project-description">{{{description}}}</section>
-        <hr>
       </article>
     </script>
 
@@ -60,8 +61,8 @@
         <section id="home">
           <!-- BUTTONS -->
           <div class="button-cont">
-            <button type="button" id="resume-button">View My Resume</button>
-            <button type="button" id="portfolio-button">View My Portfolio</button>
+            <button type="button" id="resume-button">RESUME</button>
+            <button type="button" id="portfolio-button">PORTFOLIO</button>
           </div>
 
           <!-- NAME -->

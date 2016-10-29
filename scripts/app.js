@@ -11,7 +11,7 @@ $(document).ready(function() {
   $('#portfolio-button').on('click', function() {
     $('#home').hide();
     $('body').css('background', 'none');
-    $('header, footer').css('background-color', 'black');
+    $('header, footer').css('background-color', 'rgba(60,60,60,0.8)');
     $('#portfolio').css('display', 'block');
   });
 
