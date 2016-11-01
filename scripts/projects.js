@@ -6,7 +6,8 @@ function Project (opts) {
   this.projName = opts.projName;
   this.developers = opts.developers;
   this.deployedOn = opts.deployedOn;
-  this.projImage = opts.projImage;
+  this.projLogo = opts.projLogo;
+  this.projFull = opts.projFull;
   this.projRepo = opts.projRepo;
   this.projURL = opts.projURL;
   this.description = opts.description;

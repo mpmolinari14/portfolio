@@ -23,14 +23,25 @@
           developed by <span>{{developers}}</span><br>
           Deployed On <time>{{deployedOn}}</time>
         </div>
-        <img src="{{projImage}}">
+        <img src="{{projLogo}}" class="proj-logo">
+        <div class="show-full">
+          <img src="{{projFull}}">
+          <p class="project-description">{{{description}}}
+        </div>
         <div class="link-cont">
           <button type="button" id="repo-button"><a href="{{projRepo}}">GitHub Repo</a></button>
           <button type="button" id="url-button"><a href="{{projURL}}">Project URL</a></button><br>
         </div>
-        <section class="project-description">{{{description}}}</section>
       </article>
     </script>
+
+    <!-- <script id="education-template" type="text/x-handlebars-template">
+      <article class="education-template">
+        <h2>{{school}}</h2>
+        <img src="{{schoolImage}}">
+        <p class="school-location">{{location}}</p>
+      </article>
+    </script> -->
 
   </head>
 
@@ -43,10 +54,10 @@
         <a id="header-menu" class="icon-menu"></a>
 
         <ul  id="main-nav" class="the-nav">
-          <li id="home-nav" class="tab"><a href="#">HOME</a></li>
-          <li class="tab"><a href="#">ABOUT</a></li>
-          <li class="tab"><a href="#">BLOG</a></li>
-          <li class="tab"><a href="#">CONTACT</a></li>
+          <li id="home-nav" class="tab" data-content="home"><a href="#">HOME</a></li>
+          <li id="about-nav" class="tab" data-content="about"><a href="#">ABOUT</a></li>
+          <li id="blog-nav" class="tab" data-content="blog"><a href="#">BLOG</a></li>
+          <li id="contact-nav" class="tab" data-content="contact"><a href="#">CONTACT</a></li>
         </ul>
 
       </div>
@@ -58,7 +69,7 @@
         <!--====================
                 HOME PAGE
           ====================-->
-        <section id="home">
+        <section id="home" class="tab-content">
           <!-- BUTTONS -->
           <div class="button-cont">
             <button type="button" id="resume-button">RESUME</button>
@@ -73,9 +84,16 @@
         </section>
 
         <!--====================
+                ABOUT PAGE
+          ====================-->
+        <section id="about" class="tab-content">
+          <div class="filler"></div>
+        </section>
+
+        <!--====================
               PORTFOLIO PAGE
           ====================-->
-          <section id="portfolio"></section>
+        <section id="portfolio" class="tab-content"></section>
 
       </div>
     </main>  <!-- END OF MAIN -->
@@ -98,7 +116,7 @@
     <script type="text/javascript" src="vendor/scripts/jquery.js"></script>
     <script type="text/javascript" src="vendor/scripts/handlebars.js"></script>
     <!-- MY SCRIPTS -->
-    <script type="text/javascript" src="scripts/projectData.js"></script>
+    <script type="text/javascript" src="data/projectData.js"></script>
     <script type="text/javascript" src="scripts/projects.js"></script>
     <script type="text/javascript" src="scripts/app.js"></script>
   </body>

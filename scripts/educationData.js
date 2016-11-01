@@ -1,31 +1,40 @@
 'use strict';
 
-var projectData = [
+var educationData = [
   {
-    projName: 'Ping Fellows',
-    developers: 'Michael Molinari & Bhavya Bharti',
-    deployedOn: 'September 8, 2016',
-    projImage: 'img/projects/pf-logo.png',
-    projRepo: 'https://www.github.com/bhavyaab/MasterBlaster',
-    projURL: 'https://www.bhavyaab.github.io/MasterBlaster',
+    school: 'Code Fellows',
+    schoolImage: 'img/schools/codefellows.png',
+    location: 'Seattle, Washington',
+    yearsAttended: '2016',
+    degree: '',
+    gpa: '',
     description: '<p>Bacon ipsum dolor amet do ex andouille minim, kielbasa consectetur t-bone. Ullamco alcatra deserunt, occaecat sed drumstick prosciutto. Cupim sed ullamco cow ham hock turkey pariatur. Officia landjaeger minim, tenderloin salami ribeye cupidatat. Consequat reprehenderit shank nostrud proident shoulder mollit flank. Excepteur quis occaecat kevin officia, ribeye sausage chuck et pig.</p>'
   },
   {
-    projName: 'ESPN',
-    developers: 'not Michael Molinari',
-    deployedOn: 'September 2, 1994',
-    projImage: 'img/projects/espn-logo.png',
-    projRepo: 'https://www.github.com/mpmolinari14',
-    projURL: 'https://www.espn.go.com',
+    school: 'West Virginia University',
+    schoolImage: 'img/schools/wvu.png',
+    location: 'Morgantown, West Virginia',
+    yearsAttended: '2006-2010',
+    degree: 'Master of Business Administration',
+    gpa: '3.6',
     description: '<p>Bacon ipsum dolor amet do ex andouille minim, kielbasa consectetur t-bone. Ullamco alcatra deserunt, occaecat sed drumstick prosciutto. Cupim sed ullamco cow ham hock turkey pariatur. Officia landjaeger minim, tenderloin salami ribeye cupidatat. Consequat reprehenderit shank nostrud proident shoulder mollit flank. Excepteur quis occaecat kevin officia, ribeye sausage chuck et pig.</p>'
   },
   {
-    projName: 'CNN',
-    developers: ' not Michael Molinari',
-    deployedOn: 'August 26, 1988',
-    projImage: 'img/projects/cnn-logo.png',
-    projRepo: 'https://www.github.com/mpmolinari14',
-    projURL: 'https://www.cnn.com',
+    school: 'West Virginia University',
+    schoolImage: 'img/schools/wvu.png',
+    location: 'Morgantown, West Virginia',
+    yearsAttended: '2010-2014',
+    degree: 'Bachelor of Science in Sport Management',
+    gpa: '3.6',
+    description: '<p>Bacon ipsum dolor amet do ex andouille minim, kielbasa consectetur t-bone. Ullamco alcatra deserunt, occaecat sed drumstick prosciutto. Cupim sed ullamco cow ham hock turkey pariatur. Officia landjaeger minim, tenderloin salami ribeye cupidatat. Consequat reprehenderit shank nostrud proident shoulder mollit flank. Excepteur quis occaecat kevin officia, ribeye sausage chuck et pig.</p>'
+  },
+  {
+    school: 'Parkersburg South High School',
+    schoolImage: 'img/schools/south.png',
+    location: 'Parkersburg, West Virginia',
+    yearsAttended: '2006-2010',
+    degree: '',
+    gpa: '4.0',
     description: '<p>Bacon ipsum dolor amet do ex andouille minim, kielbasa consectetur t-bone. Ullamco alcatra deserunt, occaecat sed drumstick prosciutto. Cupim sed ullamco cow ham hock turkey pariatur. Officia landjaeger minim, tenderloin salami ribeye cupidatat. Consequat reprehenderit shank nostrud proident shoulder mollit flank. Excepteur quis occaecat kevin officia, ribeye sausage chuck et pig.</p>'
   },
 ];
