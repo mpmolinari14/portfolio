@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- STYLES -->
-    <link href="https://fonts.googleapis.com/css?family=Dr+Sugiyama|Bungee|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dr+Sugiyama|Great+Vibes|Bungee|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="vendor/icomoon/style.css">
     <link rel="stylesheet" href="vendor/styles/reset.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/module-home.css">
+    <link rel="stylesheet" href="styles/module-resume.css">
     <link rel="stylesheet" href="styles/module-portfolio.css">
 
     <!-- HANDLEBARS TEMPLATES -->
@@ -35,13 +36,21 @@
       </article>
     </script>
 
-    <!-- <script id="education-template" type="text/x-handlebars-template">
+    <script id="education-template" type="text/x-handlebars-template">
       <article class="education-template">
-        <h2>{{school}}</h2>
-        <img src="{{schoolImage}}">
-        <p class="school-location">{{location}}</p>
+        <div class="ephoto-cont">
+          <img src="{{schoolImage}}">
+        </div>
+        <div class="school-content">
+          <h2>{{school}}</h2>
+          <p class="school-location">{{location}}</p>
+          <p class="years-attended">{{yearsAttended}}</p>
+          <h3 class="degree">{{{degree}}}</h3>
+          <p class="honors">{{honors}}</p>
+          <img src="{{schoolLogo}}">
+      </div>
       </article>
-    </script> -->
+    </script>
 
   </head>
 
@@ -105,6 +114,14 @@
         </section>
 
         <!--====================
+                RESUME
+          ====================-->
+        <section id="resume" class="tab-content">
+          <article id="education"></article>
+        </section>
+
+
+        <!--====================
                 PORTFOLIO
           ====================-->
         <section id="portfolio" class="tab-content"></section>
@@ -130,6 +147,8 @@
     <script type="text/javascript" src="vendor/scripts/jquery.js"></script>
     <script type="text/javascript" src="vendor/scripts/handlebars.js"></script>
     <!-- MY SCRIPTS -->
+    <script type="text/javascript" src="data/educationData.js"></script>
+    <script type="text/javascript" src="scripts/education.js"></script>
     <script type="text/javascript" src="data/projectData.js"></script>
     <script type="text/javascript" src="scripts/projects.js"></script>
     <script type="text/javascript" src="scripts/app.js"></script>

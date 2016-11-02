@@ -21,7 +21,7 @@ Project.prototype.toHtml = function() {
 };
 
 projectData.sort(function(a, b) {
-  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+  return (new Date(b.deployedOn)) - (new Date(a.deployedOn));
 });
 
 projectData.forEach(function(ele) {
