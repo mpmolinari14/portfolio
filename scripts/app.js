@@ -2,26 +2,45 @@
 
 $(document).ready(function() {
 
-  $('#portfolio').hide();
+  $('.tab-content').hide();
+  $('#home').fadeIn();
+  $('body').toggleClass('home-body');
 
   // MOBILE DROPDOWN //
   $('#header-menu').on('click', function() {
     $('#main-nav').toggleClass('open-nav');
   });
 
-  // LOAD PORTFOLIO PAGE //
-  $('#portfolio-button').on('click', function() {
-    $('#home').fadeOut();
-    $('body').css('background', 'none');
-    $('header, footer').css('background-color', 'rgba(60,60,60,0.8)');
-    $('#portfolio').fadeIn();
+  // MAIN NAVIGATION //
+  $('#main-nav').on('click', '.tab', function() {
+    var $tab = $(this).attr('data-content');
+    console.log($tab);
+    $('.tab-content').fadeOut();
+    $('#' + $tab).fadeIn();
   });
 
-  // MAIN NAVIGATION //
-  $('#home-nav').on('click', function() {
-    $('#about, #blog, #contact, #resume, #portfolio').fadeOut();
-    $('#home').fadeIn();
-    $('body').css('background', 'url(../img/mmHero.jpg) no-repeat center fixed');
+  $('#main-nav li').on('focus', function() {
+    $(this).css('font-size', '40px');
   });
+
+  // PORTFOLIO //
+  $('#portfolio-button').on('click', function() {
+    $('.tab-content').hide();
+    $('#portfolio').fadeIn();
+    $('.show-full').hide();
+    $('body').toggleClass();
+  });
+
+  $('#portfolio .proj-logo').on('mouseover', function() {
+    $('.proj-logo').hide();
+    $('.show-full').fadeIn();
+  });
+
+  $('#portfolio .show-full').on('mouseout', function() {
+    $('.show-full').hide();
+    $('.proj-logo').fadeIn();
+  });
+
+
 
 });

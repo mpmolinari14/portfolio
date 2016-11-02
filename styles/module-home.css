@@ -36,8 +36,8 @@
   font-family: 'Bungee', cursive;
   font-size: 20px;
   text-align: center;
-  padding: 6px;
-  border-bottom: solid 2px rgb(60,60,60);
+  padding: 8px;
+  border-bottom: 2px solid rgb(60,60,60);
 }
 #main-nav li a {
   color: rgb(60,60,60);
@@ -160,6 +160,11 @@
   }
   .main-nav a:hover {
     color: rgb(210,148,34)
+  }
+
+  main {
+    top: 115px;
+    bottom: 90px;
   }
 
   /* ------------------------------------
