@@ -19,8 +19,19 @@ $(document).ready(function() {
     $('#' + $tab).fadeIn();
   });
 
-  $('#main-nav li').on('focus', function() {
-    $(this).css('font-size', '40px');
+  $('#home-nav').on('click', function() {
+    $('body').addClass('home-body');
+  });
+
+  $('#about-nav, #blog-nav, #contact-nav').on('click', function() {
+    $('body').removeClass('home-body');
+  });
+
+  // RESUME //
+  $('#resume-button').on('click', function() {
+    $('.tab-content').hide();
+    $('#resume').fadeIn();
+    $('body').removeClass('home-body');
   });
 
   // PORTFOLIO //
@@ -28,7 +39,7 @@ $(document).ready(function() {
     $('.tab-content').hide();
     $('#portfolio').fadeIn();
     $('.show-full').hide();
-    $('body').toggleClass();
+    $('body').removeClass('home-body');
   });
 
   $('#portfolio .proj-logo').on('mouseover', function() {
