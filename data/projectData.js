@@ -13,7 +13,7 @@ var projectData = [
   },
   {
     projName: 'ESPN',
-    developers: 'not Michael Molinari',
+    developers: 'not Me',
     deployedOn: 'September 2, 1994',
     projLogo: 'img/projects/espn-logo.png',
     projFull: 'img/projects/espn-fullpage.png',
@@ -23,7 +23,7 @@ var projectData = [
   },
   {
     projName: 'CNN',
-    developers: ' not Michael Molinari',
+    developers: ' not Me',
     deployedOn: 'August 26, 1988',
     projLogo: 'img/projects/cnn-logo.png',
     projFull: 'img/projects/cnn-fullpage.png',

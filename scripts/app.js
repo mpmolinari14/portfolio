@@ -19,7 +19,11 @@ $(document).ready(function() {
     $('#' + $tab).fadeIn();
   });
 
-  // PORTFOLIO LOAD //
+  $('#main-nav li').on('focus', function() {
+    $(this).css('font-size', '40px');
+  });
+
+  // PORTFOLIO //
   $('#portfolio-button').on('click', function() {
     $('.tab-content').hide();
     $('#portfolio').fadeIn();
@@ -27,12 +31,12 @@ $(document).ready(function() {
     $('body').toggleClass();
   });
 
-  $('#portfolio .proj-logo').on('mouseenter', function() {
+  $('#portfolio .proj-logo').on('mouseover', function() {
     $('.proj-logo').hide();
     $('.show-full').fadeIn();
   });
 
-  $('#portfolio .show-full').on('mouseleave', function() {
+  $('#portfolio .show-full').on('mouseout', function() {
     $('.show-full').hide();
     $('.proj-logo').fadeIn();
   });
